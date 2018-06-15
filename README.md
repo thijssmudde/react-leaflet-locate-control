@@ -1,6 +1,6 @@
 # react-leaflet-locate-control
 
-Plugin for React-Leaflet to display fullscreen control
+Plugin for React-Leaflet to display locate control
 
 Thanks to https://github.com/domoritz/leaflet-locatecontrol/ on which this react plugin is 100% based on.
 
