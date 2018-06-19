@@ -1,6 +1,10 @@
 {
   "name": "react-leaflet-locate-control",
-  "version": "0.0.4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fullhdpixel/react-leaflet-locate-control"
+  },
+  "version": "0.0.5",
   "main": "dist/index.js",
   "lockfileVersion": 1,
   "requires": true,
