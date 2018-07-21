@@ -8,24 +8,21 @@ import './locate.css'
 // Converts leaflet.locatecontrol to a React Component
 export default class LocateControl extends MapControl {
   createLeafletElement(props) {
-    const {options} = props
+    const {options, startDirectly} = props
     const {map} = this.context
 
-    this.lc = L.control.locate(options).addTo(map)
-    return this.lc
-  }
+    const lc = L.control.locate(options).addTo(map)
 
-  start = () => {
-    this.lc.start()
-  }
+    if (startDirectly)
+      lc.start()
 
-  stop = () => {
-    this.lc.stop()
+    return lc
   }
 }
 
 import PropTypes from 'prop-types'
 
 LocateControl.propTypes = {
-  options: PropTypes.object
+  options: PropTypes.object, // Locate Options object see https://github.com/domoritz/leaflet-locatecontrol/
+  startDirectly: PropTypes.bool // Instantly start the locate control
 }
