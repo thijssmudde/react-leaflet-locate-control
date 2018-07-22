@@ -28,9 +28,11 @@ const locateOptions = {
 
 // Inside your <Map> component add LocateControl
 <Map>
-    <LocateControl options={locateOptions}/>
+  <LocateControl options={locateOptions} startDirectly/>
 </Map>
 ```
+
+startDirectly : Instantly start the locate control
 
 ## Options
 

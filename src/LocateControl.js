@@ -11,10 +11,17 @@ export default class LocateControl extends MapControl {
     const {options, startDirectly} = props
     const {map} = this.context
 
-    const lc = L.control.locate(options).addTo(map)
+    const lc = L
+      .control
+      .locate(options)
+      .addTo(map)
 
     if (startDirectly)
-      lc.start()
+      setTimeout(() => {
+        lc.start()
+        console.log('start')
+
+      }, 1000)
 
     return lc
   }
@@ -23,6 +30,6 @@ export default class LocateControl extends MapControl {
 import PropTypes from 'prop-types'
 
 LocateControl.propTypes = {
-  options: PropTypes.object, // Locate Options object see https://github.com/domoritz/leaflet-locatecontrol/
+  options: PropTypes.object, // Locate Options
   startDirectly: PropTypes.bool // Instantly start the locate control
 }
