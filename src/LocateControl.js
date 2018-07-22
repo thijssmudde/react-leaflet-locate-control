@@ -19,8 +19,6 @@ export default class LocateControl extends MapControl {
     if (startDirectly)
       setTimeout(() => {
         lc.start()
-        console.log('start')
-
       }, 1000)
 
     return lc
