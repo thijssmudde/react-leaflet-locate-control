@@ -45,7 +45,7 @@
     "url-loader": "^1.0.1",
     "webpack": "^4.16.1",
     "webpack-cli": "^2.1.5",
-    "webpack-command": "^0.2.1",
+    "webpack-command": "^0.4.1",
     "webpack-dev-server": "^3.1.4"
   }
 }
