@@ -1,4 +1,4 @@
-import 'leaflet.locatecontrol'
+import './lib/L.Control.Locate.js'
 
 import L from 'leaflet'
 import {MapControl} from 'react-leaflet'
