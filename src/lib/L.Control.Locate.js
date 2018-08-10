@@ -154,6 +154,10 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
          */
         onActivate: function () {
         },
+        /** Callback to add logic after the location engine stops working
+         */
+        onDeactivate: function () {
+        },
         /** This event is called in case of any location error that is not a time out error. */
         onLocationError: function (err, control) {
           alert(err.message)
@@ -352,26 +356,32 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
       * Override it to shutdown any functionalities you added on start.
       */
       _deactivate: function () {
-        this
-          ._map
-          .stopLocate()
-        this._active = false
-
-        if (!this.options.cacheLocation) {
-          this._event = undefined
-        }
-
-        // unbind event listeners
-        this
-          ._map
-          .off('locationfound', this._onLocationFound, this)
-        this
-          ._map
-          .off('locationerror', this._onLocationError, this)
-        this
-          ._map
-          .off('dragstart', this._onDrag, this)
-      },
+        if (this._active) {
+            this
+              .options
+              .onDeactivate()
+  
+            this
+              ._map
+              .stopLocate()
+            this._active = false
+  
+            if (!this.options.cacheLocation) {
+              this._event = undefined
+            }
+  
+            // unbind event listeners
+            this
+              ._map
+              .off('locationfound', this._onLocationFound, this)
+            this
+              ._map
+              .off('locationerror', this._onLocationError, this)
+            this
+              ._map
+              .off('dragstart', this._onDrag, this)
+          }
+        },
 
       /**
       * Zoom (unless we should keep the zoom level) and an to the current view.
