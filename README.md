@@ -55,6 +55,7 @@ startDirectly : Instantly start the locate control
 | `followCircleStyle` | [`Path options`](http://leafletjs.com/reference.html#path-options)  | Changes to the accuracy circle while following. Only need to provide changes. | `{}` |
 | `followMarkerStyle` | [`Path options`](http://leafletjs.com/reference.html#path-options)  | Changes to the inner marker while following. Only need to provide changes. | `{}` |
 | `icon` | `string`  | The CSS class for the icon. | `fa fa-map-marker` |
+| `iconInactive` | `string` | The CSS class for the icon when inactive. When none is given, uses `icon`'s value | `icon`
 | `iconLoading` | `string`  | The CSS class for the icon while loading. | `fa fa-spinner fa-spin` |
 | `iconElementTag` | `string`  | The element to be created for icons. | `span` |
 | `circlePadding` | `array`  | Padding around the accuracy circle. | `[0, 0]` |
@@ -65,6 +66,7 @@ startDirectly : Instantly start the locate control
 | `strings` | `object`  | Strings used in the control. Options are `title`, `metersUnit`, `feetUnit`, `popup`, and `outsideMapBoundsMsg` | see code |
 | `locateOptions` | [`Locate options`](http://leafletjs.com/reference.html#map-locate-options)  | The default options passed to leaflets locate method. | see code |
 | `onActivate` | `function` | Callback to add logic before the location engine starts working. |  |
+| `onDeactivate` | `function` | Callback to add logic before the location engine stops working. |  |
 
 Go to https://github.com/domoritz/leaflet-locatecontrol/
 
