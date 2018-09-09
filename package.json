@@ -22,7 +22,7 @@
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy"
   },
-  "author": "Fullhdpixel <contact@myroutes.io>, initial version by Leaflet (https://github.com/Leaflet)",
+  "author": "Thijs Smudde <contact@myroutes.io>, initial version by Leaflet (https://github.com/Leaflet)",
   "license": "MIT",
   "readme": "README.md",
   "peerDependencies": {
