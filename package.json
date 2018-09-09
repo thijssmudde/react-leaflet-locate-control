@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/fullhdpixel/react-leaflet-locate-control"
   },
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "dist/index.js",
   "lockfileVersion": 1,
   "requires": true,
@@ -21,7 +21,8 @@
     "transpile": "babel src -d dist --copy-files",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
-    "publish-demo": "npm run build && npm run deploy"
+    "publish-demo": "npm run build && npm run deploy",
+    "prepublishOnly": "npm run transpile"
   },
   "author": "Thijs Smudde <contact@myroutes.io>, initial version by Leaflet (https://github.com/Leaflet)",
   "license": "MIT",
